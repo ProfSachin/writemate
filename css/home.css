@@ -1,0 +1,88 @@
+/* 
+   HOME PAGE
+ */
+
+/* ---------- HERO ---------- */
+.hero {
+  padding: 5rem 1.5rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero-left {
+  min-width: 0;
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-svg-box {
+  width: 100%;
+  max-width: 480px;
+  min-height: 360px;
+  border-radius: 32px;
+  background: #fffaf2;
+  border: 1px solid #eadcc8;
+  box-shadow: 0 24px 70px rgba(17, 24, 39, 0.08);
+  overflow: hidden;
+  align-content: center;
+}
+
+.hero-svg-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.hero h1 .accent {
+  color: var(--accent);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--ink-mute);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-meta span::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 10px;
+  background-color: var(--accent);
+  transform: rotate(45deg);
+  vertical-align: middle;
+}
+
+/* ---------- FEATURE LIST ---------- */
+.feature-num {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}

@@ -1,0 +1,134 @@
+/* 
+   WRITING TOOLS PAGE
+   */
+
+.tool-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--line);
+  overflow-x: auto;
+}
+
+.tool-tab {
+  padding: 0.75rem 1.25rem;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--ink-mute);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.tool-tab:hover {
+  color: var(--ink);
+}
+
+.tool-tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.tool-panel {
+  display: none;
+}
+
+.tool-panel.active {
+  display: block;
+}
+
+textarea.tool-input {
+  width: 100%;
+  min-height: 220px;
+  padding: 1.25rem;
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  outline: none;
+  resize: vertical;
+  color: var(--ink);
+}
+
+textarea.tool-input:focus {
+  border-color: var(--accent);
+}
+
+.tool-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0;
+  margin: 1.5rem 0;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.tool-stat {
+  padding: 1rem;
+  text-align: center;
+  border-right: 1px solid var(--line);
+}
+
+.tool-stat:last-child {
+  border-right: none;
+}
+
+.tool-stat-num {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.tool-stat-label {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-mute);
+  margin-top: 0.25rem;
+}
+
+.tool-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.tool-output {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  min-height: 80px;
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.tool-output.empty {
+  color: var(--ink-mute);
+  font-style: italic;
+}
+.essay-section{
+  display: flex;
+flex-direction: column;
+}
+#lorem-count{
+  width: 50px;
+  height: 30px;
+  background-color: transparent;
+  border: solid;
+  border-width: 1px;
+  border-color: grey;
+  border-radius: 4px;
+  
+}

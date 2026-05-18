@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typing Speed Test — WriteMate</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/typing.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand"><img src="images/logo.svg" alt="WriteMate logo" class="brand-logo">  WriteMate</a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="typing-test.html">Typing Test</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="tools.html">Writing Tools</a></li>
+        <li><a href="templates.html">Templates</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="container">
+    <div class="eyebrow">Measure</div>
+    <h1 style="font-size:clamp(2rem,4vw,3rem);">Typing Speed Test</h1>
+    <p class="lead" style="margin-top:1rem;">
+      Pick a duration, click the input box, and start typing. Your WPM
+      and accuracy update live.
+    </p>
+
+    <!-- TEST STAGE -->
+    <div class="typing-stage">
+      <!-- Stats -->
+      <div class="typing-stats">
+        <div class="stat-box">
+          <div class="stat-num live" id="stat-wpm">0</div>
+          <div class="stat-label">WPM</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" id="stat-acc">100%</div>
+          <div class="stat-label">Accuracy</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" id="stat-time">30s</div>
+          <div class="stat-label">Time left</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" id="stat-chars">0</div>
+          <div class="stat-label">Chars correct</div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="typing-display" id="typing-display"></div>
+
+      <!-- Input -->
+      <input
+        type="text"
+        class="typing-input"
+        id="typing-input"
+        autocomplete="off"
+        autocorrect="off"
+        autocapitalize="off"
+        spellcheck="false"
+        placeholder="Click here and start typing..."
+      />
+
+      <!-- Controls -->
+      <div class="test-controls">
+        <div class="duration-pills">
+          <button class="duration-pill" data-duration="15">15s</button>
+          <button class="duration-pill active" data-duration="30">30s</button>
+          <button class="duration-pill" data-duration="60">60s</button>
+        </div>
+        <button class="btn btn-ghost btn-small" id="btn-reset">Restart</button>
+      </div>
+
+      <!-- Result banner -->
+      <div id="result-banner" style="display:none; margin-top:1.5rem; padding:1.25rem; background:var(--accent-soft); border-radius:8px;"></div>
+    </div>
+
+    <!-- Tips -->
+    <div style="margin-top:3rem;">
+      <h2 style="font-size:1.5rem;">A few tips</h2>
+      <ul style="list-style:none; padding:0; margin-top:1rem;">
+        <li style="padding:0.5rem 0; border-bottom:1px solid var(--line);"><strong>Try not to look at the keyboard.</strong> Looking down to find a key is what slows most people down.</li>
+        <li style="padding:0.5rem 0; border-bottom:1px solid var(--line);"><strong>Keep your wrists relaxed.</strong> If your shoulders are tense, your fingers will be too.</li>
+        <li style="padding:0.5rem 0; border-bottom:1px solid var(--line);"><strong>Accuracy first.</strong> A high WPM with mistakes is slower than a steady, clean pace.</li>
+        <li style="padding:0.5rem 0;"><strong>Short, regular practice.</strong> Ten minutes a day works better than one long session a week.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-brand">WriteMate</div>
+    <p>A university project · Built with HTML, CSS &amp; vanilla JavaScript</p>
+    <p style="margin-top:0.5rem;">© <span data-year>2026</span> · All rights reserved</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/typing.js"></script>
+</body>
+</html>

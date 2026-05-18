@@ -1,0 +1,172 @@
+/* 
+   PRACTICE PAGE
+    */
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 1.5rem;
+  background: var(--paper);
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  margin: 2rem 0;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.keyboard-row {
+  display: flex;
+  gap: 6px;
+  max-width: 100%;
+  flex-wrap: nowrap;
+}
+
+.key {
+  min-width: 44px;
+  height: 50px;
+  padding: 0 0.6rem;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-bottom: 3px solid var(--line);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  transition: all 0.08s;
+}
+
+.key.wide {
+  min-width: 72px;
+}
+
+.key.xwide {
+  min-width: 96px;
+}
+
+.key.space {
+  min-width: 300px;
+}
+
+.key.active {
+  background: var(--accent);
+  color: var(--paper);
+  border-color: var(--accent);
+  transform: translateY(2px);
+  border-bottom-width: 1px;
+}
+
+.key.target {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.key.lf { background: rgba(255, 90, 31, 0.08); }
+.key.lr { background: rgba(255, 90, 31, 0.16); }
+.key.lm { background: rgba(255, 90, 31, 0.24); }
+.key.li { background: rgba(255, 90, 31, 0.32); }
+.key.ri { background: rgba(47, 122, 61, 0.32); }
+.key.rm { background: rgba(47, 122, 61, 0.24); }
+.key.rr { background: rgba(47, 122, 61, 0.16); }
+.key.rf { background: rgba(47, 122, 61, 0.08); }
+
+.practice-target {
+  font-family: var(--mono);
+  font-size: clamp(1.4rem, 4vw, 2.5rem);
+  text-align: center;
+  letter-spacing: 0.12em;
+  padding: 2rem;
+  background: var(--paper);
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  margin-bottom: 1.5rem;
+  color: var(--ink-mute);
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.practice-target span {
+  display: inline-block;
+}
+
+.practice-target .pending {
+  color: var(--ink-mute);
+}
+
+.practice-target .done {
+  color: var(--good);
+}
+
+.practice-target .current {
+  color: var(--accent);
+  position: relative;
+}
+
+.practice-target .current::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.lesson-pills {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.lesson-pill {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  font-family: var(--mono);
+  transition: all 0.2s;
+}
+
+.lesson-pill:hover {
+  border-color: var(--ink);
+}
+
+.lesson-pill.active {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+#practice-input {
+  width: 100%;
+  height: 15px;
+  padding: 1.25rem 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  border-radius: 14px;
+  border: solid;
+  border-width: 1px;
+
+}
+.typing-input {
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.typing-input:focus {
+  border-color: #ff4000;
+  outline: none;
+  box-shadow: 0 0 0 1px rgb(255, 64, 0);
+}

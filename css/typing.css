@@ -1,0 +1,145 @@
+/* 
+   TYPING TEST PAGE
+    */
+
+   .typing-stage {
+    background: var(--paper);
+    border-radius: var(--radius);
+    padding: 3rem;
+    border: 1px solid var(--line);
+    margin-top: 2rem;
+  }
+
+.typing-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-box {
+  text-align: center;
+  padding: 1rem;
+  border-right: 1px solid var(--line);
+}
+
+.stat-box:last-child {
+  border-right: none;
+}
+
+.stat-num {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.stat-num.live {
+  color: var(--accent);
+}
+
+.stat-label {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-mute);
+  margin-top: 0.5rem;
+}
+
+.typing-display {
+  font-family: var(--mono);
+  font-size: 1.45rem;
+  line-height: 2.2;
+  letter-spacing: 0.02em;
+  user-select: none;
+  margin-bottom: 1.5rem;
+
+  min-height: 260px;
+  max-height: 360px;
+  overflow-y: auto;
+
+  padding: 1.5rem;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  position: relative;
+}
+
+.typing-display .char {
+  color: var(--ink-mute);
+  transition: color 0.1s;
+}
+
+.typing-display .char.correct {
+  color: var(--ink);
+}
+
+.typing-display .char.incorrect {
+  color: var(--bad);
+  background: rgba(195,58,58,0.1);
+  border-radius: 2px;
+}
+
+.typing-display .char.current {
+  background: var(--accent);
+  color: var(--paper);
+  border-radius: 2px;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+
+.typing-input:focus {
+  border-color: var(--accent);
+}
+
+.test-controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.duration-pills {
+  display: flex;
+  gap: 0.5rem;
+  background: var(--bg);
+  padding: 4px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+}
+
+.duration-pill {
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  transition: all 0.2s;
+}
+
+.duration-pill.active {
+  background: var(--ink);
+  color: var(--paper);
+}
+#typing-input {
+  width: 100%;
+  height: 15px;
+  padding: 1.25rem 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  border-radius: 14px;
+  border: solid;
+  border-width: 1px;
+}

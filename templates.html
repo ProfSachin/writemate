@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Templates & Essay Helper — WriteMate</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/templates.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand"><img src="images/logo.svg" alt="WriteMate logo" class="brand-logo"> WriteMate</a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="typing-test.html">Typing Test</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="tools.html">Writing Tools</a></li>
+        <li><a href="templates.html">Templates</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="container">
+    <div class="eyebrow">04 / Start</div>
+    <h1 style="font-size:clamp(2rem,4vw,3rem);">Templates &amp; Essay Helper</h1>
+    <p class="lead" style="margin-top:1rem;">
+      Pick a structure that fits your assignment. Fill the prompts on the left and watch a draft form on the right.
+      Copy it, download it, edit it freely.
+    </p>
+
+    <!-- TEMPLATE GRID -->
+    <div class="template-grid" id="template-grid"></div>
+
+    <!-- BUILDER -->
+    <div class="essay-builder" id="essay-builder" style="display:none;">
+      <h2 id="builder-title" style="margin-bottom:1.5rem;"></h2>
+
+      <div class="grid-2">
+        <div>
+          <h3 style="font-size:1.05rem; margin-bottom:1rem; color:var(--ink-soft);">Fill in the details</h3>
+          <div id="builder-fields"></div>
+        </div>
+        <div>
+          <h3 style="font-size:1.05rem; margin-bottom:1rem; color:var(--ink-soft);">Live draft</h3>
+          <div class="essay-preview" id="builder-preview"></div>
+          <div style="margin-top:1rem; display:flex; gap:0.75rem; flex-wrap:wrap;">
+            <button class="btn btn-primary btn-small" id="btn-copy-essay">Copy draft</button>
+            <button class="btn btn-ghost btn-small" id="btn-download-essay">Download .txt</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIPS -->
+    <div style="margin-top:3rem;">
+      <h2 style="font-size:1.5rem;">Writing advice that actually helps</h2>
+      <div class="grid-3" style="margin-top:1.5rem;">
+        <div class="card">
+          <div class="feature-num">A · Read aloud</div>
+          <h3>Find awkward sentences</h3>
+          <p style="color:var(--ink-soft); margin-top:0.5rem;">Anything you stumble on while reading aloud is something a reader will stumble on too. Rewrite it.</p>
+        </div>
+        <div class="card">
+          <div class="feature-num">B · Cut 10%</div>
+          <h3>Trim every draft</h3>
+          <p style="color:var(--ink-soft); margin-top:0.5rem;">Aim to delete one word in ten on your second pass. The argument almost always gets sharper.</p>
+        </div>
+        <div class="card">
+          <div class="feature-num">C · One idea</div>
+          <h3>One idea per paragraph</h3>
+          <p style="color:var(--ink-soft); margin-top:0.5rem;">If you can't summarise a paragraph in one sentence, you've packed too much in. Split it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-brand">WriteMate</div>
+    <p>A university project · Built with HTML, CSS &amp; vanilla JavaScript</p>
+    <p style="margin-top:0.5rem;">© <span data-year>2026</span> · All rights reserved</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/templates.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact — WriteMate</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- Internal Style Sheet Example -->
+  <style>
+    .internal-style-note {
+      background-color: #fff3e6;
+      border-left: 4px solid #ff5a1f;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-top: 1.5rem;
+      color: #4a4a4a;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.svg" alt="WriteMate logo" class="brand-logo">  WriteMate
+      </a>
+
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="typing-test.html">Typing Test</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="tools.html">Writing Tools</a></li>
+        <li><a href="templates.html">Templates</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="container-narrow">
+      <div class="eyebrow">Contact me</div>
+
+      <h1>Have a question about WriteMate?</h1>
+
+      <p class="lead" style="margin-top: 1.5rem;">
+        Use the form below to send a message. This page demonstrates a contact form
+        with JavaScript validation.
+      </p>
+
+
+    </section>
+
+    <section class="container">
+      <div class="contact-layout">
+        <div class="contact-info card">
+          <h2>Get in touch</h2>
+
+          <div class="contact-info card">
+            <h2>Get in touch</h2>
+          
+            <p>
+              WriteMate is a uni project for showing HTML, CSS, responsive
+              layout and JavaScript form validation.
+            </p>
+          
+            <div class="contact-detail">
+              <strong>Project:</strong>
+              <span>Personal writing and typing assistant</span>
+            </div>
+          
+            <div class="contact-detail">
+              <strong>Built with:</strong>
+              <span>HTML, CSS, JavaScript</span>
+            </div>
+          
+            <div class="contact-detail">
+              <strong>Purpose:</strong>
+              <span>Practising typing and writing</span>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <strong>Project:</strong>
+            <span>Personal Writing Assistant Website</span>
+          </div>
+
+          <div class="contact-detail">
+            <strong>Built with:</strong>
+            <span>HTML, CSS, JavaScript</span>
+          </div>
+
+          <div class="contact-detail">
+            <strong>Purpose:</strong>
+            <span>Typing practice and writing improvement</span>
+          </div>
+        </div>
+
+        <div class="contact-form-card card">
+          <h2>Send a message</h2>
+
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="Enter your full name" />
+              <small class="error-message" id="name-error"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="Enter your email address" />
+              <small class="error-message" id="email-error"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" placeholder="Enter message subject" />
+              <small class="error-message" id="subject-error"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" placeholder="Write your message here"></textarea>
+              <small class="error-message" id="message-error"></small>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+
+            <p id="form-status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-brand">WriteMate</div>
+    <p>A university project · Built with HTML, CSS &amp; vanilla JavaScript</p>
+    <p style="margin-top:0.5rem;">© <span data-year>2026</span> · All rights reserved</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

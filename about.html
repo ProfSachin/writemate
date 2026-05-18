@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — WriteMate</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand"><img src="images/logo.svg" alt="WriteMate logo" class="brand-logo"> WriteMate</a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="typing-test.html">Typing Test</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="tools.html">Writing Tools</a></li>
+        <li><a href="templates.html">Templates</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="container-narrow">
+    <div class="eyebrow">About</div>
+    <h1 style="font-size:clamp(2rem,4vw,3rem);">About this project</h1>
+    <p class="lead" style="margin-top:1.5rem;">
+      WriteMate is a six-page website I built for a uni front-end module.
+      It uses plain HTML, CSS and JavaScript, no frameworks and no build step.
+    </p>
+  
+    <h2 style="margin-top:3rem;">What it does</h2>
+    <p style="color:var(--ink-soft); margin-top:1rem;">
+      The site brings together four things students reach for a lot:
+      a typing speed test that shows live WPM and accuracy, a keyboard
+      practice mode with an on-screen keyboard, a set of writing tools
+      (word counter, case converter, text transform, lorem ipsum), and an
+      essay helper that fills six different document templates from your inputs.
+    </p>
+  
+    <h2 style="margin-top:3rem;">Tech stack</h2>
+    <div class="grid-2" style="margin-top:1rem;">
+      <div class="card">
+        <h3>Front-end</h3>
+        <p style="font-family:var(--mono); font-size:0.9rem; color:var(--ink-soft); margin-top:0.5rem;">
+          HTML5, CSS3, plain JS<br />
+          CSS variables for the colour theme<br />
+          Responsive grid layout<br />
+          Google Fonts (Fraunces, Inter, JetBrains Mono)
+        </p>
+      </div>
+      <div class="card">
+        <h3>Structure</h3>
+        <p style="font-family:var(--mono); font-size:0.9rem; color:var(--ink-soft); margin-top:0.5rem;">
+          Static multi-page site<br />
+          Shared base + navbar stylesheets<br />
+          One CSS file per page<br />
+          One JS file per interactive page
+        </p>
+      </div>
+    </div>
+  
+    <h2 style="margin-top:3rem;">How I built it</h2>
+    <p style="color:var(--ink-soft); margin-top:1rem;">
+      I started with the typing test because that was the part I was least
+      sure about. Once the WPM and accuracy logic worked, the rest came
+      faster. The keyboard practice page took the longest to style, mostly
+      because I kept redoing the finger-zone colours. I finished the
+      templates page last and ended up rewriting the essay builder twice
+      before I was happy with how it preview-updated as you type.
+    </p>
+  
+    <h2 style="margin-top:3rem;">File structure</h2>
+    <pre style="background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); padding:1.5rem; font-family:var(--mono); font-size:0.85rem; overflow-x:auto; line-height:1.7;">WriteMate/
+index.html             Home
+typing-test.html       Typing speed test
+practice.html          Keyboard practice
+tools.html             Writing utilities
+templates.html         Essay templates
+about.html             This pag
+contact.html           Contact form
+  css/
+   base.css           Variables, layout, buttons, cards
+   navbar.css         Top navigation
+   home.css           Home page
+   about.css          About page (timeline)
+   contact.css        Contact form
+   practice.css       Keyboard practice
+   tools.css          Writing tools tabs
+   templates.css      Templates &amp; builder
+   typing.css         Typing test
+   responsive.css     Mobile breakpoints
+  js/
+   main.js            Shared (mobile menu, year, toast)
+   typing.js          Speed test engine
+   practice.js        Keyboard practice
+   tools.js           Writing tools
+   templates.js       Essay builder
+   contact.js         Form validation</pre>
+  
+    <h2 style="margin-top:3rem;">Credits</h2>
+    <p style="color:var(--ink-soft); margin-top:1rem;">
+      Built as a coursework submission. Fonts from Google Fonts.
+    </p>
+  
+    <div style="margin-top:3rem; padding:2rem; background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); text-align:center;">
+      <h3>Try it out</h3>
+      <p style="color:var(--ink-soft); margin:1rem 0;">Jump into the speed test or have a look at the tools.</p>
+      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+        <a href="typing-test.html" class="btn btn-primary">Start typing test </a>
+        <a href="templates.html" class="btn btn-ghost">Browse templates</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-brand">WriteMate</div>
+    <p>A university project · Built with HTML, CSS &amp; vanilla JavaScript</p>
+    <p style="margin-top:0.5rem;">© <span data-year>2026</span> · All rights reserved</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

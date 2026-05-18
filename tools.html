@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Writing Tools — WriteMate</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/tools.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand"><img src="images/logo.svg" alt="WriteMate logo" class="brand-logo">  WriteMate</a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="typing-test.html">Typing Test</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="tools.html">Writing Tools</a></li>
+        <li><a href="templates.html">Templates</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="container">
+    <div class="eyebrow">Refine</div>
+    <h1 style="font-size:clamp(2rem,4vw,3rem);">Writing Tools</h1>
+    <p class="lead" style="margin-top:1rem;">
+      Four small utilities I use while writing: counting, casing,
+      transforming and placeholder text.
+    </p>
+
+    <!-- TABS -->
+    <div class="tool-tabs" style="margin-top:2.5rem;">
+      <button class="tool-tab active" data-tab="stats">Word Counter</button>
+      <button class="tool-tab" data-tab="case">Case Converter</button>
+      <button class="tool-tab" data-tab="xform">Text Transform</button>
+      <button class="tool-tab" data-tab="lorem">Lorem Ipsum</button>
+    </div>
+
+    <!-- PANEL: STATS -->
+    <div class="tool-panel active" id="panel-stats">
+      <textarea class="tool-input" id="stats-input" placeholder="Paste or type your text here..."></textarea>
+      <div class="tool-stats">
+        <div class="tool-stat"><div class="tool-stat-num" id="cnt-words">0</div><div class="tool-stat-label">Words</div></div>
+        <div class="tool-stat"><div class="tool-stat-num" id="cnt-chars">0</div><div class="tool-stat-label">Chars</div></div>
+        <div class="tool-stat"><div class="tool-stat-num" id="cnt-chars-nospace">0</div><div class="tool-stat-label">No-space</div></div>
+        <div class="tool-stat"><div class="tool-stat-num" id="cnt-sentences">0</div><div class="tool-stat-label">Sentences</div></div>
+        <div class="tool-stat"><div class="tool-stat-num" id="cnt-paragraphs">0</div><div class="tool-stat-label">Paragraphs</div></div>
+        <div class="tool-stat"><div class="tool-stat-num" id="cnt-time">1m</div><div class="tool-stat-label">Read time</div></div>
+      </div>
+      <p style="color:var(--ink-mute); font-size:0.85rem; font-family:var(--mono);">
+        Reading time assumes 200 words per minute.
+      </p>
+    </div>
+
+    <!-- PANEL: CASE -->
+    <div class="tool-panel" id="panel-case">
+      <textarea class="tool-input" id="case-input" placeholder="Paste some text to convert..."></textarea>
+      <div class="tool-actions">
+        <button class="btn btn-ghost btn-small" data-case="upper">UPPERCASE</button>
+        <button class="btn btn-ghost btn-small" data-case="lower">lowercase</button>
+        <button class="btn btn-ghost btn-small" data-case="title">Title Case</button>
+        <button class="btn btn-ghost btn-small" data-case="sentence">Sentence case</button>
+        <button class="btn btn-ghost btn-small" data-case="alt">aLtErNaTiNg</button>
+        <button class="btn btn-ghost btn-small" data-case="invert">iNVERT cASE</button>
+      </div>
+      <div class="tool-output empty" id="case-output">Choose a case style — the result appears here.</div>
+      <div style="margin-top:0.75rem;">
+        <button class="btn btn-primary btn-small" data-copy="case-output">Copy result</button>
+      </div>
+    </div>
+
+    <!-- PANEL: TRANSFORM -->
+    <div class="tool-panel" id="panel-xform">
+      <textarea class="tool-input" id="xf-input" placeholder="Paste text or a list of lines..."></textarea>
+      <div class="tool-actions">
+        <button class="btn btn-ghost btn-small" data-xf="reverse">Reverse characters</button>
+        <button class="btn btn-ghost btn-small" data-xf="reverse-words">Reverse words</button>
+        <button class="btn btn-ghost btn-small" data-xf="sort">Sort lines A→Z</button>
+        <button class="btn btn-ghost btn-small" data-xf="sort-desc">Sort lines Z→A</button>
+        <button class="btn btn-ghost btn-small" data-xf="dedupe">Remove duplicates</button>
+        <button class="btn btn-ghost btn-small" data-xf="trim">Trim each line</button>
+        <button class="btn btn-ghost btn-small" data-xf="squash">Squash whitespace</button>
+        <button class="btn btn-ghost btn-small" data-xf="shuffle">Shuffle lines</button>
+      </div>
+      <div class="tool-output empty" id="xf-output">Apply a transform — the result appears here.</div>
+      <div style="margin-top:0.75rem;">
+        <button class="btn btn-primary btn-small" data-copy="xf-output">Copy result</button>
+      </div>
+    </div>
+
+    <!-- PANEL: LOREM -->
+    <div class="tool-panel" id="panel-lorem">
+      <div style="display:flex; gap:1rem; flex-wrap:wrap; align-items:flex-end; margin-bottom:1.5rem;">
+        <div class="essay-section" style="flex:1; min-width:140px; margin-bottom:0;">
+          <label for="lorem-count">Amount</label>
+          <input type="number" id="lorem-count" value="3" min="1" max="100" />
+        </div>
+        <div class="essay-section" style="flex:1; min-width:160px; margin-bottom:0;">
+          <label for="lorem-type">Unit</label>
+          <select id="lorem-type" style="width:100%; padding:0.75rem 1rem; font-family:var(--sans); font-size:1rem; background:var(--bg); border:1px solid var(--line); border-radius:8px; outline:none;">
+            <option value="paragraphs">Paragraphs</option>
+            <option value="sentences">Sentences</option>
+            <option value="words">Words</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" id="btn-lorem">Generate</button>
+      </div>
+      <div class="tool-output empty" id="lorem-output">Press generate — placeholder text appears here.</div>
+      <div style="margin-top:0.75rem;">
+        <button class="btn btn-primary btn-small" data-copy="lorem-output">Copy result</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-brand">WriteMate</div>
+    <p>A university project · Built with HTML, CSS &amp; vanilla JavaScript</p>
+    <p style="margin-top:0.5rem;">© <span data-year>2026</span> · All rights reserved</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/tools.js"></script>
+</body>
+</html>

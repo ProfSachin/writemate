@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keyboard Practice — WriteMate</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/practice.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand"><img src="images/logo.svg" alt="WriteMate logo" class="brand-logo">WriteMate</a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="typing-test.html">Typing Test</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="tools.html">Writing Tools</a></li>
+        <li><a href="templates.html">Templates</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="container">
+    <div class="eyebrow">Train</div>
+    <h1 style="font-size:clamp(2rem,4vw,3rem);">Keyboard Practice</h1>
+    <p class="lead" style="margin-top:1rem;">
+      Short drills, one row at a time. The keyboard underneath shows
+      finger zones and lights up the key you need to press next.
+    </p>
+
+    <!-- LESSON PICKER -->
+    <div class="lesson-pills" style="margin-top:2rem;">
+      <button class="lesson-pill active" data-lesson="homerow">Home Row</button>
+      <button class="lesson-pill" data-lesson="toprow">Top Row</button>
+      <button class="lesson-pill" data-lesson="bottomrow">Bottom Row</button>
+      <button class="lesson-pill" data-lesson="numbers">Numbers</button>
+      <button class="lesson-pill" data-lesson="symbols">Symbols</button>
+      <button class="lesson-pill" data-lesson="bigrams">Common Pairs</button>
+      <button class="lesson-pill" data-lesson="sentences">Sentences</button>
+    </div>
+
+    <!-- TARGET TEXT -->
+    <div class="practice-target" id="practice-target"></div>
+
+    <!-- INPUT -->
+    <input
+      type="text"
+      class="typing-input"
+      id="practice-input"
+      autocomplete="off"
+      autocorrect="off"
+      autocapitalize="off"
+      spellcheck="false"
+      placeholder="Start typing the highlighted character..."
+    />
+
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-top:1rem; flex-wrap:wrap; gap:1rem;">
+      <div id="practice-status" style="font-family:var(--mono); font-size:0.85rem; color:var(--ink-mute);"></div>
+      <button class="btn btn-ghost btn-small" id="practice-reset">Reset lesson</button>
+    </div>
+
+    <!-- VISUAL KEYBOARD -->
+    <div class="keyboard" id="keyboard"></div>
+
+    <!-- LEGEND -->
+    <div style="display:flex; gap:1.5rem; flex-wrap:wrap; font-family:var(--mono); font-size:0.8rem; color:var(--ink-soft); margin-top:1rem;">
+      <span><span style="display:inline-block; width:14px; height:14px; background:rgba(255,90,31,0.24); border-radius:3px; vertical-align:middle;"></span> Left hand</span>
+      <span><span style="display:inline-block; width:14px; height:14px; background:rgba(47,122,61,0.24); border-radius:3px; vertical-align:middle;"></span> Right hand</span>
+      <span><span style="display:inline-block; width:14px; height:14px; background:var(--accent-soft); border:1px solid var(--accent); border-radius:3px; vertical-align:middle;"></span> Next key</span>
+    </div>
+
+    <!-- FINGER GUIDE -->
+    <div style="margin-top:3rem;">
+      <h2 style="font-size:1.5rem;">Where your fingers go</h2>
+      <p style="color:var(--ink-soft); margin:1rem 0;">
+        Your fingers rest on the home row. Left hand on
+        <code style="font-family:var(--mono); background:var(--bg-deep); padding:2px 6px; border-radius:4px;">A S D F</code>
+        and right hand on
+        <code style="font-family:var(--mono); background:var(--bg-deep); padding:2px 6px; border-radius:4px;">J K L ;</code>.
+        Both index fingers should be able to feel the small bumps on F and J,
+        which is how you find the row without looking.
+      </p>
+      <div class="grid-2" style="margin-top:1.5rem;">
+        <div class="card">
+          <h3 style="color:var(--accent);">Left hand</h3>
+          <p style="font-family:var(--mono); font-size:0.9rem; color:var(--ink-soft); margin-top:0.5rem;">
+            Pinky: A, Q, Z<br />
+            Ring: S, W, X<br />
+            Middle: D, E, C<br />
+            Index: F, R, V (also G, T, B)
+          </p>
+        </div>
+        <div class="card">
+          <h3 style="color:var(--good);">Right hand</h3>
+          <p style="font-family:var(--mono); font-size:0.9rem; color:var(--ink-soft); margin-top:0.5rem;">
+            Index: J, U, M (also H, Y, N)<br />
+            Middle: K, I, ,<br />
+            Ring: L, O, .<br />
+            Pinky: ;, P, /
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-brand">WriteMate</div>
+    <p>A university project · Built with HTML, CSS &amp; vanilla JavaScript</p>
+    <p style="margin-top:0.5rem;">© <span data-year>2026</span> · All rights reserved</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/practice.js"></script>
+</body>
+</html>
